@@ -26,7 +26,6 @@
     - Level 3 (創新級 - Innovative)：擁有能運用多種分析技術的威脅狩獵者，可自行開發狩獵方法而非依賴第三方程序 (create new data analysis procedures)，具備機器學習與關聯數據分析能力
     - Level 4 (領先級 - Leading)：多數狩獵方法已實現營運化並轉化為自動偵測 (automate the majority of successful data analysis procedures)，狩獵團隊致力於持續改進方法論，能有效停止並偵測對手活動
 
-
 💡NIST SP 800-150：Guide to Cyber Threat Information Sharing
 - 威脅狩獵最佳實踐 (Threat Hunting Best Practices)：
     - 理解環境的所有維度 (Understand all aspects of the environment)：包含通訊流、用戶權限與架構，以識別異常並揭露零時差攻擊 (Zero-day) 或跨安全邊界的攻擊
