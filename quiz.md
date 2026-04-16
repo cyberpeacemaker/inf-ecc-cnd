@@ -18,22 +18,27 @@
 - WinLogon and NetLogon: login interface
 - Security Account Manager(**SAM**): database file (registry hive) | store user account and group hashed password
 - Local Security Ahtuority Subsystem(**:LSASS**): user-mode process | brain of the authentication sub-system | policy, token, audit, log
-# 24 37
+# 24, 37, 108
 - TCP Flag [ack, push, rst, syn, fin]
-# 27 UPS
-- Standby-Ferro: legacy
+# 27, 131 UPS
+- Standby-Ferro: legacy, home
 - line Interactive: small business
-- Double Conversion On-Line: isolation
-- Delta Conversion On-Line: modern double
-# 34
+- Double Conversion On-Line: isolation, 10kVA, convert AC to DC, mission-crtical DC
+- Delta Conversion On-Line: modern double, Large DC
+# 34, 127
 - AppLocker: Path Rule
 # 41
 - Integrated NAS: Head, Network Interface, Storage all bundled into a single 'appliance'
 - Gateway NSA: independent Head
 - FreeNAS: Software
-# 44 91
-- RAID
-# 45 incident triage
+# 44, 91, 117, 121
+- RAID 0: dara stripping
+- RAID 1: mirror
+- RAID 3: partial cks
+- RAID 5: 1 disk
+- RAID 6: 2 disk
+- RAID 50: at least 3
+# 45, 136 incident triage
 - analysis, classification
 - prioritization, notification
 - containment, evidence gathering
@@ -61,8 +66,8 @@
 - BIA: if goes wrong, how abd is it (RTO/RPO)
 - Disaster Recovery Strategy: How do we meet (RTO/RPO)
 - BCP: final plan everyone follows
-# 64
--  Get-WindowsOptionalFeature -Online -Feature smb1 protocol (NO s)
+# 64, 115
+- `Get-WindowsOptionalFeature -Online -Feature smb1 protocol` (NO s)
 # 65
 - Iris recognition: Front | Colored Ring
 - Retianl Scanning: Back | Blood vessel
@@ -72,10 +77,12 @@
 - NIST: IoT
 # 76
 - Azure: MicroBurst | Cloud
-# 77
+# 77, 113
 - Risk = Asset + Threat + Vulnerability
-# 79
+- Attack = Motive(goal) + Method + Vulnerability
+# 79, 135
 - 802.11b
+- 802.16: MAM
 # 82
 - WEP
 - WPA
@@ -89,7 +96,7 @@
 - SAS (Serial Attached SCSI): connection type
 - SAN (Storage Area Network): independent network connect servers to data storage device
 - NAS (Network Attached Storage): lives on existing LAN
-# 89
+# 89, 129
 - Debian: apt-get
 - Red Hat: up2date > yum > dnf
 - Slackware: Swaret
@@ -105,5 +112,66 @@
 - Network-based
 - push-based
 - host-based
-
-100
+# 101, 133
+- IoT Chip-level: JTAG
+- TooL: SET
+# 102, 106
+- star: easy to expand
+- Bus:
+- Mesh:
+- Ring:
+- Ad-Hoc: same channel name and SSID
+# 103
+- PGP: App Layer
+# 104
+- AWS Shared Reponsibility Model: [Container, Abstract, Infrastructure]
+# 105, 107
+- Network access policy [Promiscuous, Permissive, Prudent, Paranoid]
+# 109
+Authorization
+- centralized: RADIUS
+- decentralized
+- implicit: assumed
+- explicit: clearly stated
+# 110, 118 BC/DR
+- Risk Assesment, Business Impact Analysis, RTO, RPO
+- Data-centric
+- BC/DR [Prevention, Response, Resumption, Recovery, Restoration]
+# 111
+- Win: BitLocker, Device Encryption
+- Mac: FileVault
+- Linux: dm-crypt
+# 114
+- Dry chemical
+# 119
+- Apache: /var/log/httpd
+# 120
+- WASC(Web Application Security Consortium): create, refine and promote internet safety standdards
+# 122
+- content-basedL payload
+- context-based: Header (IP, protocol, cks)
+- atomic-signature-based: simge packet
+- composite-signature-based: multiple packet
+# 124
+- registry [Resplendent registrar, Reg.exe, Regedit.exe]
+# 125
+- Packet filtering: network (IP) | ip
+- Circuit-level Gateway: session (transport)| hide private network information
+- App-level Gateway: app layer | get, post
+# 128
+- Reflector Antenna: bossting a standard signal
+- Yagi Antenna: point-to-point (between building)
+- Dipole Antenna: standard routet "rabbit ears"
+- Parabolic Grid Antenna: long range, narrow concentrated beam
+# 132 Vulnerability Management
+1. Discovery/Mapping
+2. Asset Priorization and Allocation
+3. Assessment/Scanning
+4. Reporting - Technical and Executive
+5. Remediation / Treating Risk: Mitigation, Remediation
+6. Verification/Rescanning
+# 137 Event Correlation
+- Rule-Based: if-then
+- Field-Based: compares specific field
+- Graph-based: visualizing
+- Automated Field: exhaustive
