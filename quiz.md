@@ -3,17 +3,16 @@
 - pull-based : client-server, server catch through FTP from client
 - Network-based
 - host-based
-# 4, 35, 59, 110, 118, 156, 246, 253 BC/DR
-- Risk Assesment: likelihood * impac, exposure of risk 
+# 4, 19 Risk Management Phase
+1. Risk Identification: Establishing context, quantifying risk
+2. Risk Assessment: likelihood * impact | exposure of risk | quantitative and qualitative
+3. Risk Treament: [eliminate, transfer, mitigate, accept, avoidance]
+4. Risk Tracking & Review
+# 35, 59, 110, 118, 156, 246, 253 BC/DR
 - BIA (Business Impact Analysis): examine [RTO: tolerable len, lost revenue | RPO:time frame, solution for DR/BC]
 - BCP (Business Continueous Plan): final plan everyone follows
 - Data-centric
 - BC/DR [Prevention, Response, Resumption, Recovery, Restoration]
-# 4, 19 Risk Management Phase
-1. Risk Identification: Establishing context, quantifying risk
-2. Risk Assessment: likelihood * impact. quantitative and qualitative
-3. Risk Treament: [eliminate, transfer, mitigate, accept, avoidance]
-4. Risk Tracking & Review
 # 6, 44, 91, 117, 121, 289, 58
 - RAID 0: dara stripping | > 2
 - RAID 1: mirror | > 2
@@ -41,7 +40,7 @@
 - HIPAA (Health Insurance Portability and Accountability Act): health
 - GDPR (General Data Protection Regulation): European personal privacy
 - **GLBA** (Gramm-Leach-Bliley Act): financial institution, privacy of customer
-- SOX (Sarbanes-Oxkey Act if 2002): financial reporting, accounting fraud
+- SOX (Sarbanes-Oxkey Act in 2002): financial reporting, accounting fraud
 - DMCA (Digital Millennium Copyright Act): Intellectual Property Law
 - FISMA (Federal Information Security Management Act): protect government info
 # 23, 87, 296
@@ -91,8 +90,8 @@
 - Amazon EC2 (Elastic Compute Cloud): Iaas (Infrastructure as a Service)
 - AWS CloudTrial: viewing account activity and events | record API call
 - AWS Shared Reponsibility Model: 
-    - Infrastructure (EC2) : OS, patching, firewall, data
-    - Container: firewall, data
+    - Infrastructure (EC2) : OS, patching, firewall, IAM, data
+    - Container: firewall, IAM, data
     - Abstract: data
 - AWS IAM identity: Inline Policy (1-to-1 relationship) | customer/AWS-managed are standalone
 # 55, 96, 159, 299
@@ -118,27 +117,35 @@
 - Cgrounp(control group): CPU, memory, swap | limit/account/isolate resource usage
 - Seccomp (secure computing mode): block specific **syscall** | firewall for the kernel
 - docker daemon: manage docker image, container
-# 71, 138, 175, 270, 120
+# 71, 120, 138, 175, 270
 - NIST: IoT, SDLC | CSF (Cybersecurity Framework)
-- ISO 27001: Reuirement
+- ISO 27001: Requirement
 - ISO 27002: The Controls
 - ISO 27005: risk management
 - ISO 27007: Auditing Guidance
 - ISO 27018: Cloud
-- COBIT (Control Objectives for Information and Related Technologies): Governance & Alignment | IT and Businiess
+- COBIT: Governance & Alignment | IT and Businiess
 - WASC(Web Application Security Consortium): create, refine and promote internet safety standdards
+# 75, 257 Defense-in-Depth
+- policy, procedure, awareness: BYOD
+- physical: CCTV
+- preimeter: router, firewall, dns server
+- internal network: switch
+- host: os, patch, antivirus, logging
+- application: ACL, black/white listing
+- data:
 # 76, 158 Azure
 - MicroBurst: powershell, vulnerability scan | how attacks happen
 - Azure Key Vault: data at rest in Azure services
 # 77, 113, 196, 231
 - Risk = Asset + Threat + Vulnerability
 - Attack = Motive(goal) + Method + Vulnerability
-- risk factor = likelihood * impact 
+- risk factor = likelihood * impact | threat * vulnerability * consequence
 # 79, 135, 163, 262 Wireless
 - 802.11: IEEE standard
 - 802.11b: DSSS (Direct-sequence Sprea Spectrum) | mutiplied with pseudo random noise
 - 802.16: MAN (Metropolitan Are network)
-# 82, 168
+# 82, 168, 193
 - WEP: RC4, 24bit, CRC
 - WPA: RC4/TKIP, 48bit, CRC, 4-way handshake
 - WPA2: AES-CCMP, 4-way handshake, CBC-MAC (Cipher Block Chaining Message Authentication Code)
@@ -263,7 +270,7 @@ Authorization
 # 205
 - Windows AD Authentication: PAM(Pluggable Authentication Module)
 # 207, 307 analyze attack surface
-- [visualize(understand), identify, simulate, reduce]
+- [visualize(understand), identify IoE, simulate, reduce]
 - visualize: [assets, topology, policies]
 # 209 ICMP
 - C? icmp.type==14/15/17
@@ -276,20 +283,12 @@ Authorization
 - IDS order [prevention, intrusion monitoring, intrusion detection, response]
 # 225
 - ipv4 mapped to ipv6, port 21
-# 226 powershell 
+# 226, 240 powershell 
 - PS logging [Transcript: text-based (user input and terminal output) (autditing), Script block: code blcok (actual code being run) (de-obfuscation), Module: pipeline execution (variable and command invocation)]
 - languagemode [Restricted, Constrained, Full]
 - policy [restricted, allsigned, remotesigned, unrestricted]
 # 255
-- TACACS+ (Terminal Access Controller Access Control System Plus): encrypting including userpassword4
-# 257 Defense-in-Depth
-- policy, procedure, awareness: BYOD
-- physical: CCTV
-- preimeter: router, firewall, dns server
-- internal network: switch
-- host: os, patch, antivirus, logging
-- application: ACL, black/white listing
-- data:
+- TACACS+ (Terminal Access Controller Access Control System Plus): encrypting including userpassword
 # 260 RAM Type
 - SRAM: 1-20ns
 - DRAM/SDRAM: 50-150ns
