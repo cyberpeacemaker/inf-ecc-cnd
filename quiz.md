@@ -3,16 +3,27 @@
 - pull-based : client-server, server catch through FTP from client
 - Network-based
 - host-based
+# 4, 35, 59, 110, 118, 156, 246, 253 BC/DR
+- Risk Assesment: likelihood * impac, exposure of risk 
+- BIA (Business Impact Analysis): examine [RTO: tolerable len, lost revenue | RPO:time frame, solution for DR/BC]
+- BCP (Business Continueous Plan): final plan everyone follows
+- Data-centric
+- BC/DR [Prevention, Response, Resumption, Recovery, Restoration]
+# 4, 19 Risk Management Phase
+1. Risk Identification: Establishing context, quantifying risk
+2. Risk Assessment: likelihood * impact. quantitative and qualitative
+3. Risk Treament: [eliminate, transfer, mitigate, accept, avoidance]
+4. Risk Tracking & Review
 # 6, 44, 91, 117, 121, 289, 58
-- RAID 0: dara stripping
-- RAID 1: mirror
+- RAID 0: dara stripping | > 2
+- RAID 1: mirror | > 2
 - RAID 3: 1 parity drive | > 3
 - RAID 5: distributed parity | 1 broken | > 3
-- RAID 6: distributed parity | 2 broken
-- RAID 10: > 4
-- RAID 50: > 6 | high tolenrace + high speed
+- RAID 6: distributed parity | 2 broken | > 4
+- RAID 10: > 4 | high cost
+- RAID 50: > 6 | high tolenrace + high speed | high tech
 - SATA: hot plugging
-# q11
+# 11
 - S/MIME: RSA
 # 13, 54, 64, 89, 129, 146, 115, 178, 286 cmd
 - Debian: `apt-get`
@@ -23,16 +34,16 @@
 - `sudo netstat -tunlp: list all port`: Displays protocol statistics and current TCP/IP network connections.
 - `sudo systemctl disable [service]`
 - `sudo apt-get dist-upgrade`
-- `update-rc.d -f [service name] remove`: Disable unwanted services
+- `update-rc.d -f [service name] remove`: Disable unwanted services (run command | init)
 - `Get-WindowsOptionalFeature -Online -Feature smb1 protocol` (NO s)
 # 14, 208
-- SOX (Sarbanes-Oxkey Act if 2002): traded company, accountint firm
+- PCI-DSS (Payment Card Industry Data Security Standard): credit card
+- HIPAA (Health Insurance Portability and Accountability Act): health
+- GDPR (General Data Protection Regulation): European personal privacy
 - **GLBA** (Gramm-Leach-Bliley Act): financial institution, privacy of customer
-- FISMA (Federal Information Security Management Act): protect government info
+- SOX (Sarbanes-Oxkey Act if 2002): financial reporting, accounting fraud
 - DMCA (Digital Millennium Copyright Act): Intellectual Property Law
-- PCI DSS: payment card
-# 19
-- risk management [identification, assessment, treatment, monitor & review]
+- FISMA (Federal Information Security Management Act): protect government info
 # 23, 87, 296
 - Security Reference Monitor (**SRM**):  kernel-mode | Ntoskrnl.exe | check user/process has the rights to access
 - WinLogon and NetLogon: login interface
@@ -40,30 +51,37 @@
 - Local Security Ahtuority Subsystem(**LSASS**): user-mode process | brain of the authentication sub-system | policy, token, audit, log
 - Local Administrator Password Solution (**LAPS**): store admin password in AD
 # 24, 37, 108, 172, 279, 287 wireshark
-- TCP Flag [consgestion, ecn-echom urgent, ack | push, rst, syn, fin]
+- TCP Flag [urgent, ack | push, rst, syn, fin] (Unskilled Attackers Pester Real System Folks)
 - tcp.flags [000, 029, 02b]
 - tcp.options.mss_val < 1460
+- tcp.options.wscale_val==10
 - tcp.dstport/udp.dstport==7
 # 27, 131, 243 UPS
 - Standby-Ferro: legacy, unstable
 - line Interactive: small business
-- ture online: double conversion
-- Double Conversion On-Line: 10kVA, convert AC to DC, mission-crtical DC, isolation
-- Delta Conversion On-Line: modern double, efficiency, direct connectivity
+- true online / Double Conversion On-Line: 10kVA, AC to DC to AC, mission-crtical DC, completely isolation (airgp)
+- Delta Conversion On-Line: modern double, efficiency, direct connectivity, partial/hybrid isolation
 # 34, 127
 - AppLocker: Path Rule
 # 41, 88, 160
-- SAS (Serial Attached SCSI): connection type
-- SAN (Storage Area Network): independent network connect servers to data storage device
-- NAS (Network Attached Storage): lives on existing LAN
+- DAS (Direct Attached Storage): external hard drive
+- SAS (Serial Attached SCSI): physical connection, cable
+- SAN (Storage Area Network): high-speed, dedicated network for storage, looks like a local hard drive (Block-level storage)
+- NAS (Network Attached Storage): lives on existing LAN, looks like a shared folder (File-level storage)
     - Integrated NAS: Head, Network Interface, Storage all bundled into a single 'appliance'
-    - Gateway NSA: independent Head
-    - FreeNAS: Software
-# 45, 136 incident triage
+    - Gateway NSA: independent Head / Storage
+    - FreeNAS: Software-defined OS
+# 45, 136 incident response / triage
 - analysis, classification
 - prioritization, notification
 - containment, evidence gathering
 - eradication, recovery
+# 46, 83, 210, 247, 297 Virtualization Docker
+- hardware-level: slow, takes place in VMs | VMWare/hyper-v | hypervisor | Guest OS
+- Para Virtualization (OS Assisted): Guest OS knows it is not running on physical hardware | Xen
+- os-level: fast, docker, No Guest OS, all container share host OS
+- storage-level: storage pooling
+- network-level: VLAN, VPN, SDN
 # 50 SNMP
 - TRAPS:PUSH for Help
 - INFORM PUSH | SNMPv2c | Need manager send back confirm
@@ -71,41 +89,46 @@
 - SET: managet to agent
 # 51, 93, 104, 222
 - Amazon EC2 (Elastic Compute Cloud): Iaas (Infrastructure as a Service)
-- AWS CloudTrial: viewing account activity and events
-- AWS Shared Reponsibility Model: [Container, Abstract, Infrastructure]
-- AWS IAM identity: Inline Policy
+- AWS CloudTrial: viewing account activity and events | record API call
+- AWS Shared Reponsibility Model: 
+    - Infrastructure (EC2) : OS, patching, firewall, data
+    - Container: firewall, data
+    - Abstract: data
+- AWS IAM identity: Inline Policy (1-to-1 relationship) | customer/AWS-managed are standalone
 # 55, 96, 159, 299
-- IoE: Potential Risk Exposure
+- IoE: Potential Risk Exposure, missconfigured S3 bucket
 - IoA: Remote code Execution, Beaconing attempt
-- IoC
-- KRI (Key Risk Indicator): How risky an activity is | Risk Appetite | Notify, Identify, backward looking view
+- IoC: hash, ip, domain
+- KRI (Key Risk Indicator): business metric used to predict the likelihood of an event that would exceed the organization's risk appetite. (ex: Percentage of staff who haven't completed security training.) | How risky an activity is | Risk Appetite | Notify, Identify, backward looking view 
 # 56, 290
-- VPN Concentrator [Security Key, User Address, I/O Operation]
-- VPN pipe Model: one customer edge to another | CE-to-CE
-# 4, 35, 59, 110, 118, 156, 246, 253 BC/DR
-- Risk Assesment: what could go wrong
-- BIA: if goes wrong, how abd is it | examine [RTO: tolerable len, lost revenue | RPO:time frame, solution for DR/BC]
-- BCP: final plan everyone follows
-- Risk Assesment, Business Impact Analysis
-- Data-centric
-- BC/DR [Prevention, Response, Resumption, Recovery, Restoration]
+- VPN Concentrator: handle high volume of VPN tunnels
+    - Manage Security Key: ISAKMP/IKE, keys are rotated and managed securely
+    - Assign User Address: assign vitual internal IP for client
+    - Enable I/O Operation: flow traffic, data transfer
+- VPN QoS Model
+    - Uniform: copies original priority to tunnel header | Trust carrier to manage and update your priority
+    - Pipe: one customer edge to another | CE-to-CE | ensure client order
+    - Short-Pipe: | Customer wants to control the final exit priority
+    - hose-model: softer than pipe
 # 65, 203
 - Iris recognition: Front | Colored Ring
 - Retianl Scanning: Back | Blood vessel
 # 67, 164, 267, 276 Docker Container
-- `--cpus="2"`
-- Cgrounp(control group): CPU, memory, swap
-- Seccomp (secure computing mode): block specific **syscall**
+- `--cpus="2"`: limit the hardware resource
+- Cgrounp(control group): CPU, memory, swap | limit/account/isolate resource usage
+- Seccomp (secure computing mode): block specific **syscall** | firewall for the kernel
 - docker daemon: manage docker image, container
 # 71, 138, 175, 270, 120
-- NIST: IoT, SDLC
+- NIST: IoT, SDLC | CSF (Cybersecurity Framework)
+- ISO 27001: Reuirement
+- ISO 27002: The Controls
 - ISO 27005: risk management
 - ISO 27007: Auditing Guidance
 - ISO 27018: Cloud
-- COBIT: Governance & Alignment | IT and Businiess
+- COBIT (Control Objectives for Information and Related Technologies): Governance & Alignment | IT and Businiess
 - WASC(Web Application Security Consortium): create, refine and promote internet safety standdards
 # 76, 158 Azure
-- MicroBurst: powersheel, vulnerability scan | how attacks happen
+- MicroBurst: powershell, vulnerability scan | how attacks happen
 - Azure Key Vault: data at rest in Azure services
 # 77, 113, 196, 231
 - Risk = Asset + Threat + Vulnerability
@@ -117,15 +140,9 @@
 - 802.16: MAN (Metropolitan Are network)
 # 82, 168
 - WEP: RC4, 24bit, CRC
-- WPA: TIKIP, 48bit, CRC, 4-way handshake
-- WPA2: AES-CCMP, CBC-MAC (Cipher Block Chaining Message Authentication Code), 4-way handshake
-- WPA3: IoT, AES-GCMP 256, ECDH and ECDSA
-# 46, 83, 210, 247, 297 Virtualization Docker
-- Para Virtualization (OS Assisted): it knows it is not running on physical hardware
-- storage-level: storage pooling
-- os-level: docker (container share host os)
-- hardware-level: takes place in VMs | VMWare/hyper-v
-- network-level: VLAN, VPN
+- WPA: RC4/TKIP, 48bit, CRC, 4-way handshake
+- WPA2: AES-CCMP, 4-way handshake, CBC-MAC (Cipher Block Chaining Message Authentication Code)
+- WPA3: AES-GCMP 256, ECDH and ECDSA, BIP-GMAP-256 | IoT
 # 86
 - nwtowrk sniffing [Telnet Passwords, DNS traffic, Syslog Traffic]
 # 90
@@ -137,7 +154,8 @@
 - IoT Chip-level: JTAG
 - TooL: SET
 - Architecture layer [Device/Perception, Communication/Network, Platfform/Cloud (**Dashboard**), Application/Process]
-# 40, 42, 102, 106
+# 12, 40, 42, 102, 106
+- hub-and-spoke: main office connect to it's branch office
 - ring: each comp acts as a repeater
 - mesh: link to all device
 - star: easy to expand
@@ -183,7 +201,12 @@ Authorization
 - Parabolic Grid Antenna: long range, narrow concentrated beam
 - antenna Directivity: particular direction
 - DSSS(Direct-sequence Spread Spectrum): multiplies signal with noise
-# 132, 152, 190, 238, 294 Vulnerability Management
+- SSID(Service Set Identifieer): name
+- OFDM(orthogonal frequency-division multiplexing): multi-carrier modulation method
+- EAP(Extensible Authentication Protocal): framework allow different authentication methods
+- LEAP(lightweight Authentication Protocal): Cisco
+- TKIP(Temporal Key Integrity Protocal): used by WPA to replace WEP RC4
+# 132, 152, 190, 238, 294 Vulnerability assessment plan/Management
 1. Discovery/Mapping: acquisition of required docs, reviewing of sec policies and comppliance
 2. Asset Priorization and Allocation
 3. Assessment/Scanning | adhere to the risk analysis
@@ -204,18 +227,19 @@ Authorization
 - Attorney: legal advice/consulanting
 - Expert Witness: experienced testimony
 # 147, 213
-- Tripwire: linux file integrity
-- Nessus
-- AIDE
-- Samgain
-- OpenVAS: Vulnerability assessment, authenticated testing
+- Tripwire: linux FIM (file integrity monitoring)
+- AIDE: FIM
+- Samgain: FIM
+- Nessus: Vulnerability scanner/assessment
+- OpenVAS (Greenbone): Vulnerability scanner/assessment, authenticated testing
+- Burp suite: web pentesting
 # 149 IR Rolse and Responsibilities
 - IR Custodian: remediation and resolution
 # 157, 248 event type
 - [Error(Loss of data/functionality), Warning, information(app load successfully), successful audit, failure audit]
 # 179, 229
 - internet contetn filter: block sites
-- Network Protocal Analyzer: data lost leak | analyze packet
+- Network Protocal Analyzer (packet analyzer): data lost leak | analyze packet
 # 181 NIST
 - Prepare
 - Categorize: Defines criticality of information system according to potential worst-case
@@ -225,7 +249,7 @@ Authorization
 - Authorize: Determine risk to organizational operations and assets
 - Monitor
 # 183, 199, 251 CA PKI
-- CA (Certificate)
+- CA (Certificate): issue cert
 - RA (Registration): Verifier for the CA
 - VA (Validation): for certification revocation state (CRL, OSCP)
 # 186, 265 Information Security Policy
@@ -242,28 +266,39 @@ Authorization
 - [visualize(understand), identify, simulate, reduce]
 - visualize: [assets, topology, policies]
 # 209 ICMP
-- C?
+- C? icmp.type==14/15/17
 # 212
-- User Accecc Control: Company right
+- User Accecc Control policy: monitor the activities of employee
 # 215
 - masking: obscuring specific area
-- retention
+- retention: lifecycle
 # 218
 - IDS order [prevention, intrusion monitoring, intrusion detection, response]
 # 225
 - ipv4 mapped to ipv6, port 21
 # 226 powershell 
-- PS logging [Transcript: Session, Script block: code blcok, Module: pipeline execution]
+- PS logging [Transcript: text-based (user input and terminal output) (autditing), Script block: code blcok (actual code being run) (de-obfuscation), Module: pipeline execution (variable and command invocation)]
 - languagemode [Restricted, Constrained, Full]
 - policy [restricted, allsigned, remotesigned, unrestricted]
 # 255
-- TACACS+ (Terminal Access Controller Access Control System Plus): encrypting including userpassword
+- TACACS+ (Terminal Access Controller Access Control System Plus): encrypting including userpassword4
+# 257 Defense-in-Depth
+- policy, procedure, awareness: BYOD
+- physical: CCTV
+- preimeter: router, firewall, dns server
+- internal network: switch
+- host: os, patch, antivirus, logging
+- application: ACL, black/white listing
+- data:
 # 260 RAM Type
 - SRAM: 1-20ns
 - DRAM/SDRAM: 50-150ns
 - NAND Flash: slow
 # 271 NFV (Network Function Virtualization) | VNF
-- Virtualized Infrastructure Manager: computing, storage, network resource
+- Orchestrator(NFVO): global coordination of services
+- VNF Manager: Managing the Lifecycle of app
+- VIM(Virtualized Infrastructure Manager): computing, storage, network resource
+- NFVI: the actual physical hardware/hypervisor
 # 285
 - security policy hierarchy [laws, regulation, policy, standad and procedure]
 # 309
