@@ -256,13 +256,13 @@ Authorization
 - Authorize: Determine risk to organizational operations and assets
 - Monitor
 # 183, 199, 251 CA PKI
-- CA (Certificate): issue cert
-- RA (Registration): Verifier for the CA
+- CA (Certificate): issue cert | verify CA
+- RA (Registration): Receptionist of CA | verify the identiy/entity requesting cert
 - VA (Validation): for certification revocation state (CRL, OSCP)
 # 186, 265 Information Security Policy
 - EISP(Enterprise Infomation Security Policy): direction
-- ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption
-- SSSP(System-Specific Security Policy): AUP(Acceptable Use Policy)
+- ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption, 
+- SSSP(System-Specific Security Policy): firewall configuration, database access list, encryption, AUP
 # 188
 - cloud to user: fake bill+
 # 192 Cisco cmd
@@ -284,11 +284,11 @@ Authorization
 # 225
 - ipv4 mapped to ipv6, port 21
 # 226, 240 powershell 
-- PS logging [Transcript: text-based (user input and terminal output) (autditing), Script block: code blcok (actual code being run) (de-obfuscation), Module: pipeline execution (variable and command invocation)]
-- languagemode [Restricted, Constrained, Full]
+- PS logging [Transcript: text-based (user input and terminal output) (autditing), Module: pipeline execution (variable and command invocation)], Script block: code blcok (actual code being run) (de-obfuscation)
 - policy [restricted, allsigned, remotesigned, unrestricted]
+- languagemode [Restricted, Constrained, Full]
 # 255
-- TACACS+ (Terminal Access Controller Access Control System Plus): encrypting including userpassword
+- TACACS+ (Terminal Access Controller Access Control System Plus): encrypting whole communication 
 # 260 RAM Type
 - SRAM: 1-20ns
 - DRAM/SDRAM: 50-150ns
