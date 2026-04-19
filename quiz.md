@@ -46,8 +46,8 @@
 # 23, 87, 296
 - Security Reference Monitor (**SRM**):  kernel-mode | Ntoskrnl.exe | check user/process has the rights to access
 - WinLogon and NetLogon: login interface
-- Security Account Manager(**SAM**): database file (registry hive) | store user account and group hashed password
 - Local Security Ahtuority Subsystem(**LSASS**): user-mode process | brain of the authentication sub-system | policy, token, audit, log
+- Security Account Manager(**SAM**): database file (registry hive) | store user account and group hashed password
 - Local Administrator Password Solution (**LAPS**): store admin password in AD
 # 24, 37, 108, 172, 279, 287 wireshark
 - TCP Flag [urgent, ack | push, rst, syn, fin] (Unskilled Attackers Pester Real System Folks)
@@ -159,7 +159,7 @@
 - [low, mid, high, extreme]
 # 101, 133, 145
 - IoT Chip-level: JTAG
-- TooL: SET
+- Tool: SET
 - Architecture layer [Device/Perception, Communication/Network, Platfform/Cloud (**Dashboard**), Application/Process]
 # 12, 40, 42, 102, 106
 - hub-and-spoke: main office connect to it's branch office
@@ -201,7 +201,7 @@ Authorization
 - Packet filtering: network (IP) | ip
 - Circuit-level Gateway: session (transport)| hide private network information
 - App-level Gateway: app layer | get, post
-# 128, 165m 259 Wireless, WiFI terminologies
+# 128, 165, 259 Wireless, WiFI terminologies
 - Reflector Antenna: bossting a standard signal
 - Yagi Antenna: point-to-point (between building)
 - Dipole Antenna: standard routet "rabbit ears"
@@ -261,8 +261,8 @@ Authorization
 - VA (Validation): for certification revocation state (CRL, OSCP)
 # 186, 265 Information Security Policy
 - EISP(Enterprise Infomation Security Policy): direction
-- ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption, 
-- SSSP(System-Specific Security Policy): firewall configuration, database access list, encryption, AUP
+- ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption, Acceptable usage policy
+- SSSP(System-Specific Security Policy): firewall configuration, database access list, encryption, 
 # 188
 - cloud to user: fake bill+
 # 192 Cisco cmd
