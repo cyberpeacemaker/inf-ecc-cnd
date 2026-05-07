@@ -17,7 +17,7 @@
 - RAID 0: dara stripping | > 2
 - RAID 1: mirror | > 2
 - RAID 3: 1 parity drive | > 3
-- RAID 5: distributed parity | 1 broken | > 3
+- RAID 5: distributed parity | 1 broken | > 3 | (most commonly used)
 - RAID 6: distributed parity | 2 broken | > 4
 - RAID 10: > 4 | high cost
 - RAID 50: > 6 | high tolenrace + high speed | high tech
@@ -108,7 +108,7 @@
     - Uniform: copies original priority to tunnel header | Trust carrier to manage and update your priority
     - Pipe: one customer edge to another | CE-to-CE | ensure client order
     - Short-Pipe: | Customer wants to control the final exit priority
-    - hose-model: softer than pipe
+    - hose-model: flexible than pipe | site-based
 # 65, 203
 - Iris recognition: Front | Colored Ring
 - Retianl Scanning: Back | Blood vessel
@@ -230,6 +230,7 @@ Authorization
 - Transport Mode: payload
 - AH(Authentication Header): IA
 - ESP(Encapsulating Security Payload): IA + Confidentiality(Encryption)
+- PPTP (Point-to-Point Tunneling Protocal) > L2TP/IPSec (Layer 2 Tunneling Protocal)
 # 142 Forensic Investigation Personnel
 - Attorney: legal advice/consulanting
 - Expert Witness: experienced testimony
@@ -261,8 +262,8 @@ Authorization
 - VA (Validation): for certification revocation state (CRL, OSCP)
 # 186, 265 Information Security Policy
 - EISP(Enterprise Infomation Security Policy): direction
-- ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption, Acceptable usage policy
-- SSSP(System-Specific Security Policy): firewall configuration, database access list, encryption, 
+- ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption
+- SSSP(System-Specific Security Policy): firewall configuration, database access list, encryption, Acceptable usage policy
 # 188
 - cloud to user: fake bill+
 # 192 Cisco cmd
@@ -302,3 +303,33 @@ Authorization
 - security policy hierarchy [laws, regulation, policy, standad and procedure]
 # 309
 - Kojoney: low interaction
+
+---
+
+Standard,Frequency,Max Speed,Note
+802.11a,5 GHz,54 Mbps,"""a"" is for Alone (5GHz only, old)"
+802.11b,2.4 GHz,11 Mbps,"""b"" is for Bottom (Slowest)"
+802.11g,2.4 GHz,54 Mbps,"""g"" is for Great (Better than 'b')"
+802.11n,2.4 & 5 GHz,600 Mbps,"""n"" is for Newer/Next (MIMO)"
+802.11ac,5 GHz,1 Gbps+,"""ac"" is for All Capacity"
+
+---
+Severity Level
+0: Emergency 
+1: Alert
+2: Critical
+3: Error
+4: Warning
+5: Notice
+6: Informational
+7: Debug
+
+(E)very (A)wesome (C)isco (E)ngineer (W)ill (N)eed (I)cecream (D)aily
+Emergencies
+Are
+Critical
+Even
+When
+Nothing
+Is
+Dangerous
