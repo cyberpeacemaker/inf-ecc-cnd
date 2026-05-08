@@ -1,3 +1,23 @@
+# 1. Cyber Threat Intelligence
+- IoC, IoA
+- Proactive
+# 2. Types of CTI
+- Strategic: high-level business strategies
+- Tactical: tactics, techniques, prcedures
+- Operational: specific threat to the organization | collected from humans, social media, chat room
+- Tchnical: tools, CVE data
+# 3. IoC
+- technical indicators (evidence/clue) | Reactive | [malware, signature, exploit]
+- IoA: strategic indicator | attacker's intent | Proactive | in real time | [code execution, C2, persistence]
+# 4. Layers of CTI
+- TI feeds: [SHODAN, OSINT], [Microsoft Cyber Trust Blog]
+- TI Platform(TIPs): [storing,analyzing,organizing,compring multiple feeds], TC Complete
+# 5. leverage/consume CTI
+- Integrating TI feeds with Cisco Firepower NGFW and NGIPS
+- integrated with SIEM, OSSIM, AlienVault
+- Pyramid of Pain: prioritize efforts to detect threat
+
+---
 
 - Cyber Threat Intelligence (**CTI**)
 - Information Sharing and Analysis Center (**ISAC**), Information Sharing and Analysis Organization (**ISAO**)

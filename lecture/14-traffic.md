@@ -1,11 +1,11 @@
-# Need & Advantage
+# 1.Need & Advantage
 - Network Traffic Monitoring: Retrospective security approach
 - Anomaly > Signature
-# Setting up the Environment
+# 2.Setting up the Environment
 - Cisco: Switched Port Analyzer (**SPAN**) (Port Mirroring), 3Com: Roving Analysis Port (**RAP**)
-# Baseline
+# 3.Baseline
 - [content, context]-based, [single(atomic), multiple(composite)]-based
-# Suspicious
+# 4.Suspicious
 - FTP:over TCP:21
 - TFTP: rogue TFTP:69, security breach
 - UFTP: 1044, high-performance, unauthorized UFTP session
@@ -35,7 +35,7 @@
     - Syn && not yet Ack && Len > 0
     - TCP broadcast
     - TCP Reserved Bits
-# Performance and Bandwith
+# 5.Performance and Bandwith
 TODO
 - Network performance monitoring ((**NPM**)) (Bandwidth Monitoring): Data caching, Data Compression
 
