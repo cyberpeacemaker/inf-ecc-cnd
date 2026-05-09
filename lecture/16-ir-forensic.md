@@ -1,5 +1,5 @@
 # 1.Incident Response Concept
-- IRT: [respond, remediate, mitigate, revocer, communicate], works on IRP
+- IRT: [respond, remediate, mitigate, recover, communicate], works on IRP
     - Management: leadership and decision-making authority
     - Information Security Team: experienced in discovering and containing incidents
     - IT Staff: aware of the system (administrator)

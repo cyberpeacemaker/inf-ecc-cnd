@@ -45,9 +45,9 @@
 - FISMA (Federal Information Security Management Act): protect government info
 # 23, 87, 296
 - Security Reference Monitor (**SRM**):  kernel-mode | Ntoskrnl.exe | check user/process has the rights to access
-- WinLogon and NetLogon: login interface
 - Local Security Ahtuority Subsystem(**LSASS**): user-mode process | brain of the authentication sub-system | policy, token, audit, log
 - Security Account Manager(**SAM**): database file (registry hive) | store user account and group hashed password
+- WinLogon and NetLogon: login interface
 - Local Administrator Password Solution (**LAPS**): store admin password in AD
 # 24, 37, 108, 172, 279, 287 wireshark
 - TCP Flag [urgent, ack | push, rst, syn, fin] (Unskilled Attackers Pester Real System Folks)
@@ -79,7 +79,7 @@
 - hardware-level: slow, takes place in VMs | VMWare/hyper-v | hypervisor | Guest OS
 - Para Virtualization (OS Assisted): Guest OS knows it is not running on physical hardware | Xen
 - os-level: fast, docker, No Guest OS, all container share host OS
-- storage-level: storage pooling
+- storage-level: storage pooling // should be **Fabric Virtualization**
 - network-level: VLAN, VPN, SDN
 # 50 SNMP
 - TRAPS:PUSH for Help
@@ -93,7 +93,7 @@
     - Infrastructure (EC2) : OS, patching, firewall, IAM, data
     - Container: firewall, IAM, data
     - Abstract: data
-- AWS IAM identity: Inline Policy (1-to-1 relationship) | customer/AWS-managed are standalone
+- AWS IAM identity: customer/AWS-managed are standalone > Inline Policy (1-to-1 relationship)
 # 55, 96, 159, 299
 - IoE: Potential Risk Exposure, missconfigured S3 bucket
 - IoA: Remote code Execution, Beaconing attempt
@@ -144,6 +144,7 @@
 # 79, 135, 163, 262 Wireless
 - 802.11: IEEE standard
 - 802.11b: DSSS (Direct-sequence Sprea Spectrum) | mutiplied with pseudo random noise
+- LAWN: FHSS(Frequency-hopping Spread Sprectrum)
 - 802.16: MAN (Metropolitan Are network)
 # 82, 168, 193
 - WEP: RC4, 24bit, CRC
@@ -265,7 +266,7 @@ Authorization
 - ISSP(Issue-Specific Security Policy): email, password, nwtwork usage, internet bandwidth comsumption
 - SSSP(System-Specific Security Policy): firewall configuration, database access list, encryption, Acceptable usage policy
 # 188
-- cloud to user: fake bill+
+- cloud to user: fake bill+ //material reversed
 # 192 Cisco cmd
 - `Router(Config-if) # IP route - cache flow`: Netflow
 # 205

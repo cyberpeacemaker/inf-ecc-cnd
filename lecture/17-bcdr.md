@@ -4,14 +4,16 @@
 - Business Impact Analysis(BIA): examine [RPO, RTO], prioritized in the wake of a disaster
 # 2.BC/DR Activities
 - Prevent: restrict items not listed
-- Respone: shutting down system
+- Respond: shutting down system
 - Resumption: Continuing operations at alternate location
+- recovery: critcial
+- resotoration
 # 3.BCP and DRP
 - BCP: [risk assessment and BIA, effective response, roles and responsibilities, communication, testing and training]
 - DRP: [RTO, RPO, Communication plan, Recovery protocal, Inventory of assets]
 # 4.BC/DR Standards
 - ISO 22301:2019(Security and Resilience - Business Continuity Management Systems)
-TODO
+- ISO 27031:2011: Information and Communication Technology Readiness
 
 
 

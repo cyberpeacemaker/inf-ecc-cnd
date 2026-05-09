@@ -18,7 +18,7 @@
 
 - Enterprise Infomation Security Policy (**EISP**): Business Partner Policy, Server Policy
 - Issue-Specific Security Policy(**ISSP**): Password Policy
-- System-Specific Security Policy(**SSSP**): Encryption Policy
+- System-Specific Security Policy(**SSSP**): Encryption Policy (Acceptable Usage)
 
 - IT Asset Management (**ITAM**)
     - [Financial, Physical, Contractual] data

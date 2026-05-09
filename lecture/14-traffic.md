@@ -18,7 +18,7 @@
     - tcp.window_size < 1025
     - tcp.options.mss_val < 1460
 - Ping Sweep
-    - icmp.type==8 || icmp.tupe==0
+    - icmp.type==8 || icmp.type==0
     - tcp.dstport==7
     - udp.dstport==7
 - UDP Scan

@@ -40,6 +40,6 @@
 2. Transmission: logs are transmitted using various log transport mechanisms
 3. Storage: size, importance(time), accessibility
 4. Nomralization: from heterogeneous source
-5. Correlation: rule-nased, statistical, algorithmic
+5. Correlation: rule-based, statistical, algorithmic
 6. Analysis: intelligent decision
 7. Alerting and Reporting

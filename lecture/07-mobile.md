@@ -1,1 +1,5 @@
-- Unified Endpoint Management (UEM)
+- MDM(Mobile Device Management) solution: deploy, secure, monitor, manage device | MDM Agent
+- MAM(Mobile Application Management) Solution: secure,manage apllication on device | Microsoft Intune
+- MTD(Mbile Threat Defense)
+- MEM(Moobile Email Management)
+- Unified Endpoint Management (UEM): Remote provisioning, managing, controlling device from a sigle interface
