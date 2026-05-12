@@ -305,6 +305,16 @@ Authorization
 # 309
 - Kojoney: low interaction
 
+# 
+- FTP:21, TFTP:69, UFTP:1044, NetBIOS:137
+- succeff log on:4624, failed log on:4625, logoff:4647
+- ISO 22301:2019(Security and Resilience - Business Continuity Management Systems)
+- ISO 22313:2012: Guidance
+- ISO 27031:2011: Information and Communication Technology Readiness
+- IoC: technical indicators (evidence/clue) | Reactive | [malware, signature, exploit]
+- IoA: strategic indicator | attacker's intent | Proactive | in real time | [code execution, C2, persistence]
+- TIP: TC Complete
+- threat hunting: ManageEngine360
 ---
 
 Standard,Frequency,Max Speed,Note

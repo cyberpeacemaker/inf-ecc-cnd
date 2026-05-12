@@ -1,2 +1,4 @@
 - Risk = Asset + Threat + Vulnerability
 - Attack = Motive (Goal) + Method (TTPs) + Vulnerability
+- probability * impact
+- threat * vulnerability * impact
